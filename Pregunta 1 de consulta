@@ -1,0 +1,7 @@
+--- 	1.	¿Cuáles son los 3 clientes que más han gastado en total y cuánto han gastado cada uno?
+
+SELECT Invoice.InvoiceId AS Factura, Invoice.CustomerId AS "ID Cliente", Customer.FirstName AS Nombre, Customer.LastName As Apellido, Invoice.Total AS Total
+FROM Customer
+INNER JOIN Invoice ON Customer.CustomerId = Invoice.CustomerId
+ORDER BY Total DESC
+LIMIT 3;
