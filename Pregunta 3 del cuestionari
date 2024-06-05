@@ -1,0 +1,11 @@
+-- 3.	Indicar cuales son los 5 álbumes con más canciones, el artista compositor, de que genero son y a que multimedia pertenece.
+
+SELECT Album.Title AS titulo_del_album, Artist.Name AS Nombre_del_artista, Genre.Name AS genero, MediaType.Name AS MULTIMEDIA, COUNT(Track.TrackId) AS Cantidad
+FROM Album
+JOIN Artist ON Album.ArtistId = Artist.ArtistId
+JOIN Track ON Album.AlbumId = Track.AlbumId
+JOIN Genre ON Track.GenreId = Genre.GenreId
+JOIN MediaType ON Track.MediaTypeId = MediaType.MediaTypeId
+GROUP BY Album.AlbumId, Artist.Name
+ORDER BY cantidad DESC
+LIMIT 5;
