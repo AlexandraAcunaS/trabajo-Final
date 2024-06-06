@@ -1,4 +1,13 @@
 # trabajo-Final
 proyecto final de computación II
-# Analisis de las preferencias musicales del cliente según las ventas y tendecia del género
-La música pueden influir desde el estado de ánimo hasta la percepción de una persona. Los géneros musicales pueden crear un ambiente muy variado, es decir, puede generar un ambiente relajado (como el caso del jazz) o en todo caso uno enérgico (el rock), lo que afecta a la sensación y/o experiencia general del oyente. Al determinar qué géneros musicales son más populares entre los clientes, se puede personalizar la selección musical en una tienda, establecimento, aplicación o página, para atraer a más personas y mejorar la experiencia personal. Este tipo de comportamientos es crucial a la hora de visualizar datos, para comprender las tendencias de ventas, analizando los patrones interesantes que se obtienen en este tipo de información. Por lo tanto este trabajo tiene como objetivo determinar la preferencia musical en tendencia o más escuchado para la visualización de las ventas y mejorar la experecia del cliente. Este estudio es importante ya que se aprovecha las experiencias personales para el aumento de ventas, considerando que las preferencias musicales pueden variar según la cultura y el contexto.
+# Análisis de las Preferencias Musicales del Cliente
+## Planteamiento del Problema 
+Existe una barrera para los clientes al intentar descubrir música nueva que resuene con sus preferencias personales. Esta situación ha llevado a una disminución en la satisfacción del cliente lo que afecta a las ventas.
+El objetivo es identificar las tendencias musicales predominantes entre nuestros clientes para optimizar las estrategias de ventas y enriquecer la experiencia del usuario.
+## Herramientas 
+•RStudio
+•GitHub
+•Power BI 
+•SQLite
+## Método Estadístico 
+Para determinar los géneros más populares, analizar las preferencias de los clientes y medir las tendencias a lo largo del tiempo, se realizarán consultas SQL, análisis y  estadística descriptiva y visualizaciones de datos utilizando las herramientas mencionadas.
