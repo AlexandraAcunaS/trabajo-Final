@@ -43,8 +43,10 @@ ALTER TABLE MediaType RENAME TO Multimedia;
 ALTER TABLE Multimedia RENAME COLUMN MediaTypeId to MultimediaId;
 ALTER TABLE Multimedia RENAME COLUMN Name to Nombre;
 -----playlist------------------------------------
+-----se mantiene el nombre de la tabla-----
 ALTER TABLE Playlist RENAME COLUMN Name to Nombre;
 -----PlaylistTrack---------------------------------------
+------se mantiene el nombre de la tabla ------
 ALTER TABLE PlaylistTrack RENAME COLUMN TrackId to CancionID;
 ----tabla track----------------------------
 ----se mantiene tabla albumId-byte
