@@ -1,8 +1,12 @@
+----- tabla Album---------------------------------------
+-----se mantiene el nombre y el albumId de la tabla------------------
+ALTER TABLE Album RENAME COLUMN ArtistId to ArtistaId;
 ALTER TABLE Album RENAME COLUMN Title to Titulo;
---------------------------------------------------------
+------tabla artist-------------------------------------
 ALTER TABLE Artist RENAME TO Artista;
+ALTER TABLE Artista RENAME COLUMN ArtistId to ArtistaId;
 ALTER TABLE Artista RENAME COLUMN Name to Nombre;
----------------------------------------------------------
+------tabla customer--------------------------------
 ALTER TABLE Customer RENAME TO Cliente;
 ALTER TABLE Cliente RENAME COLUMN CustomerId to ClienteId;
 ALTER TABLE Cliente RENAME COLUMN FirstName to Nombre;
@@ -14,11 +18,14 @@ ALTER TABLE Cliente RENAME COLUMN State to Estado;
 ALTER TABLE Cliente RENAME COLUMN Country to Pais;
 ALTER TABLE Cliente RENAME COLUMN PostalCode to Codigo_Postal;
 ALTER TABLE Cliente RENAME COLUMN Phone to Telefono;
----------------------------------------------------------
+ALTER TABLE Cliente RENAME COLUMN SupportRepId to InfReporteId;
+-----tabla employee----------------------------------
 ALTER TABLE Employee RENAME TO Empleado;
 ALTER TABLE Empleado RENAME COLUMN EmployeeId to EmpleadoId;
 ALTER TABLE Empleado RENAME COLUMN FirstName to Nombre;
+ALTER TABLE Empleado RENAME COLUMN LastName to Apellido;
 ALTER TABLE Empleado RENAME COLUMN Title to Titulo;
+ALTER TABLE Empleado RENAME COLUMN ReportsTo to Informe;
 ALTER TABLE Empleado RENAME COLUMN BirthDate to Fecha_de_Nacimiento;
 ALTER TABLE Empleado RENAME COLUMN HireDate to Fecha_de_Contratacion;
 ALTER TABLE Empleado RENAME COLUMN Address to Direccion;
@@ -27,17 +34,25 @@ ALTER TABLE Empleado RENAME COLUMN State to Estado;
 ALTER TABLE Empleado RENAME COLUMN Country to Pais;
 ALTER TABLE Empleado RENAME COLUMN PostalCode to Codigo_Postal;
 ALTER TABLE Empleado RENAME COLUMN Phone to Telefono;
----------------------------------------------------------
+-----tabla genre-----------------------------------
 ALTER TABLE Genre RENAME TO Genero;
 ALTER TABLE Genero RENAME COLUMN GenreId to GeneroId;
 ALTER TABLE Genero RENAME COLUMN Name to Nombre;
----------------------------------------------------------
+----tabla mediatype----------------------------------
 ALTER TABLE MediaType RENAME TO Multimedia;
+ALTER TABLE Multimedia RENAME COLUMN MediaTypeId to MultimediaId;
 ALTER TABLE Multimedia RENAME COLUMN Name to Nombre;
----------------------------------------------------------
+-----playlist------------------------------------
 ALTER TABLE Playlist RENAME COLUMN Name to Nombre;
----------------------------------------------------------
+-----PlaylistTrack---------------------------------------
+ALTER TABLE PlaylistTrack RENAME COLUMN TrackId to CancionID;
+----tabla track----------------------------
+----se mantiene tabla albumId-byte
 ALTER TABLE Track RENAME TO Canciones;
+ALTER TABLE Canciones RENAME COLUMN TrackId to CancionID;
 ALTER TABLE Canciones RENAME COLUMN Name to Nombre;
+ALTER TABLE Canciones RENAME COLUMN MediaTypeId to MultimediaId;
+ALTER TABLE Canciones RENAME COLUMN GenreId to GeneroId;
 ALTER TABLE Canciones RENAME COLUMN Composer to Compositor;
-ALTER TABLE Canciones RENAME COLUMN Name to Nombre;
+ALTER TABLE Canciones RENAME COLUMN Milliseconds to Milisegundo;
+ALTER TABLE Canciones RENAME COLUMN UnitPrice to P_Unitario;
