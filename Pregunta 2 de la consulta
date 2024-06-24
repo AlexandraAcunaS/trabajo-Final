@@ -1,0 +1,13 @@
+---2.	¿Cuáles son los 5 artistas que tiene canciones más largas en promedio
+
+ALTER TABLE Track ADD COLUMN "Minutos" ENTEGER;
+UPDATE Track SET Minutos = Milliseconds/60000;
+
+SELECT Artist.ArtistId, Artist.Name AS Nombre, Album.Title AS Titulo,
+        round(avg( Track.Minutos),2) AS Promedio
+	   FROM Track
+	   JOIN Album ON Track.AlbumId = Album.AlbumId 
+	   JOIN Artist ON Album.AlbumId = Artist.ArtistId
+	   GROUP BY Track.AlbumId
+	   ORDER BY Track.Minutos DESC
+	   LIMIT 5;

@@ -1,0 +1,10 @@
+---4.	¿Cuáles son los 5 generenos con mayor seguimiento e indique el total de los segundos existentes en la base de datos para esos géneros?.
+
+
+SELECT Genre.Name AS Genero, count(Genre.GenreId) AS Cantidad, sum(segundos) AS segundos_Total, ROUND(AVG(segundos),2) AS Promedios_de_segundos 
+FROM Track
+	JOIN Genre ON Genre.GenreId=Track.GenreId
+		GROUP BY Genero
+		ORDER BY Cantidad DESC
+		LIMIT 5
+		
