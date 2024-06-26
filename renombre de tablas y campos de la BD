@@ -1,3 +1,4 @@
+----- tabla Album---------------------------------------
 -----se mantiene el nombre y el albumId de la tabla------------------
 ALTER TABLE Album RENAME COLUMN ArtistId to ArtistaId;
 ALTER TABLE Album RENAME COLUMN Title to Titulo;
@@ -1021,4 +1022,4 @@ UPDATE Track SET Composer="Chris Cornell, Eddie Vedder, Stone Gossard, Matt Came
 ------tabla track---------------------------
 ALTER TABLE Track RENAME TO Canciones;
 
-#arreglado el conflicto de la rama 
+#arreglado el conflicto.
