@@ -1,0 +1,236 @@
+---
+title: "Análisis de las Preferencias Musicales de los Clientes según su las ventas y Tendencia del Género Musical"
+output: 
+  flexdashboard::flex_dashboard:
+    orientacion:  
+    source_code: embed ##permite descargar el código
+    theme: sandstone
+---
+
+```{r setup, include=FALSE}
+library(RSQLite)
+library(DBI)
+library(tidyverse)
+library(flexdashboard)
+library(ggplot2)
+library(plotly)
+library(DT)
+library(shiny)
+
+### COnexión de la Base de Datos Chinook_Sqlite.sqlite denominada "musicadb"
+musicadb <- dbConnect(RSQLite::SQLite(), dbname = "Chinook_Sqlite.sqlite")
+
+tablas <- dbListTables(musicadb)
+print(tablas)
+dbListTables(musicadb)
+
+
+### Leer las tablas desde la Base de Datos
+
+Album_df <- dbReadTable(musicadb, "Album")
+Artista_df <- dbReadTable(musicadb, "Artista")
+Canciones_df <- dbReadTable(musicadb, "Canciones")
+Cliente_df <- dbReadTable(musicadb, "Cliente")
+Empleado_df <- dbReadTable(musicadb, "Empleado")
+Genero_df <- dbReadTable(musicadb, "Genero")
+Invoice_df <- dbReadTable(musicadb, "Invoice")
+InvoiceLine_df <- dbReadTable(musicadb, "InvoiceLine")
+Multimedia_df <- dbReadTable(musicadb, "Multimedia")
+Playlist_df <- dbReadTable(musicadb, "Playlist")
+PlaylistTrack_df <- dbReadTable(musicadb, "PlaylistTrack")
+
+
+```
+
+ Presentación
+========================================================================
+#### **Analisis de las Preferencias Musicales de los Clientes según su las ventas y Tendencia del Género Musical**
+
+ROW {data-width=200}
+---------------------------------
+### **Equipo**
+
+*Autores:* Alexandra Acuña, Julio Mejia, Rubén Labrador, Sebastián León,
+César Ramírez\
+**Universidad Central de Venezuela. Escuela de Estadística y Ciencias
+Actuariales (EECA)**\
+
+
+Row {.tabset .tabset-fade}
+----------------------------------------------------
+### **Introducción**
+
+La música puede influir desde el estado de ánimo hasta la percepción de
+una persona. Los géneros musicales pueden crear un ambiente muy variado,
+es decir, puede generar un ambiente relajado (como el caso del jazz) o
+en todo caso uno enérgico (el rock), lo que afecta a la sensación y/o
+experiencia general del oyente.\
+Por lo tanto en este trabajo está hecho en base a la Base de Datos SQL
+"Chinook_sqlite", que a través de ténicas de estadística descriptiva, se
+analizarán todo lo relacionado a la música de los años 2009 hasta 2013,
+con las canciones y artistas que más influyeron de la época, y cómo
+afectan las tendencias musicales predominantes en las ventas de estos
+mismos.\
+\
+En este caso se presentan gráficos y tablas (en representación a los
+resultados de dicho análisis propuesto). Se trabajarán en conjunto con
+los datos las consultas hechas en SQL para facilitar la proyección de
+las tablas que se van usar y un análisis de gráficos interactivos en
+Power Bi.\
+\
+Es importante entender que cuando se habla de ventas musicales, se
+aprovecha las experiencias personales de cada persona, considerando sus
+preferencias musicales y que estos pueden variar según la cultura y el
+contexto que lo rodea.
+
+### **Chinook_sqlite**
+
+Es una base de datos con temática de una tienda musical virtual que
+venden 25 diferentes géneros musicales, como los son: Rock, Jazz, Metal,
+Alternative & Punk, Latino, Reggae, Pop, entre otros más; y géneros
+musicales pertenecientes a soundtracks o música relacionadas al cine y
+series de TV (...).\
+\
+Esta Base de Datos de ejemplo, se usa mucho para la práctica y
+aprendizaje de SQL. Especialmente para trabajos en SQLite.\
+Ademas de contener información de los diferentes tipos de géneros
+musicales, existen diversidad de información sobre: Albumes, Artistas,
+Empleados, Clientes, Facturas y más. Entre esas están:\
+
+-   *Empleados:* Almacena datos de los empleados, como ID, apellidos,
+    nombres, etc.
+-   *Clientes:* Contiene información sobre los clientes.
+-   *Invoices e InvoiceLine:* Estas dos tablas almacenan datos de la
+    factura.
+-   *Artista:* Guarda datos de los artistas (ID y nombre).
+-   *Album:* Almacena información sobre los álbumes.
+-   *Multimedia:* Contiene tipos de medios, como archivos de audio MPEG
+    y AAC.
+-   *Genero:* Guarda géneros musicales (rock, jazz, metal, etc.).
+-   *Canciones:* Almacena datos de las canciones.
+-   *Playlists y PlaylistTrack:* Las playlists contienen listas de
+    canciones, y la relación entre playlists y canciones es de muchos a
+    muchos.
+
+
+ Tabset
+==========================================================================
+
+Row {.tabset}
+-----------------------------------------------------------------------
+### **Album**
+
+```{r}
+datatable(Album_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **Artista**
+
+```{r}
+datatable(Artista_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **Canciones**
+
+```{r}
+datatable(Canciones_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **Clientes**
+
+```{r}
+datatable(Cliente_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **Empleados**
+
+```{r}
+datatable(Empleado_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **Género**
+
+```{r}
+datatable(Genero_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **Invoice**
+
+```{r}
+datatable(Invoice_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **InvoiceLine**
+
+```{r}
+datatable(InvoiceLine_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **Multimedia**
+
+```{r}
+datatable(Multimedia_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **Playlist**
+
+```{r}
+datatable(Playlist_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+### **PlaylistTrack**
+
+```{r}
+datatable(PlaylistTrack_df, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact")
+```
+
+
+ Planteamiento
+========================================
+ROW {data-width=500}
+---------------------------------
+### **Planteamiento del Problema**
+"Determinar la preferencia musical en tendencia o más escuchado para la
+visualización de las ventas y mejorar la experiencia del cliente"
+
+### **Formulación del Problema**
+¿Cómo incide la música en los clientes según su género más escuchado?
+
+COLUMN {data-width=700}
+---------------------------------
+### **Preguntas Generales**
+-   ¿Cuál fue el año con más rentabilidad en la música?
+-   ¿Cuál fue el género más escuchado en los años 2009-2013?
+-   ¿Cuáles son los países que frecuentemente compran música?
+-   ¿Cuáles son los géneros más escuchados en los países? 
+-   ¿Cuáles son los álbumes y artistas más producidos?
+-   ¿Cuáles son los álbumes y artistas más escuchados?
+-   ¿Cuál es el género musical más escuchado?
+-   ¿Cuál fue el compositor con más influencia?
+
+
+
+Row {.tabset .tabset-fade}
+----------------------------------------------------
+### **Objetivo General**
+*   Determinar la influencia y alcance de la música en los clientes
+
+### **Obejtivos Específicos**
+-    *Analizar la diversidad de los géneros musicales*
+-    *Identificar lso artistas más populares por géneros*
+-    *Examinar las tendencias de compra de los clientes*
+-    *Estudiar la duración de las pistas musicales*
+-    *Determinar los géneros en tendencia de la época*
+-    *Analizar las tendencias musicales de los países*
+
