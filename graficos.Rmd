@@ -52,5 +52,5 @@ ggplotly( ggplot(ressultado2) +
             theme_minimal() +
             theme(plot.title = element_text(size = 16L, 
         face = "bold"), axis.text.y = element_text(face = "italic"), 
-        axis.text.x = element_text(face = "italic", 
+        axis.text.x = element_text(face = "italic", angle = 60L)) )
                                                     
