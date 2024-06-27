@@ -1,0 +1,14 @@
+---
+title: 'Análisis gráfica #1 dispersión'
+author: "sebasalf"
+date: "2024-06-24"
+output: HTML_document
+---
+
+\#**Análisis de gráfica de dispersión**
+
+En la gráfica de dispersión se encuentra una relación lineal entre el total de ventas y el total de compras para los 25 géneros musicales disponibles en la base de datos Chinook desde el año 2009 hasta el 2013. Se centra en el intervalo de [0; 20] en ambos ejes mostrando una relación lineal casi perfecta a lo largo de los años con escasos, no superando la cantidad de dos valores atipicos esto debido a que algunas canciones debido a sus formato, duracion o autor pueden incrementar su precio.
+
+\#**Destacados En compras y ventas**
+
+Los generos Rock y Latin son los que encabezan las listas a lo largo de la muestra de la base de datos manteniendo esa tendencia, mientras que ciertos generos siempre se encuentran en los ultimos lugares como el Rock and Roll, el easy listening, World o los Soundtracks.
