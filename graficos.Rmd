@@ -1,0 +1,56 @@
+con <- dbConnect(RSQLite::SQLite(),dbname="BaseChinook.sqlite")
+tablas <- dbListTables(con)
+print(tablas)
+Album_df <- dbReadTable(con,"Album")
+Artista_df <- dbReadTable(con,"Artist")
+Customer_df <- dbReadTable(con,"Customer")
+Invoice_df <- dbReadTable(con,"Invoice")
+InvoiceLine_df <- dbReadTable(con,"InvoiceLine")
+Genero_df <- dbReadTable(con,"Genero")
+Canciones_df <- dbReadTable(con,"Canciones")
+
+consulta <- "SELECT Customer.Country as pais,
+       Genero.Nombre as generos,
+		count(InvoiceLine.InvoiceLineId) as totalventas
+	FROM Customer
+JOIN Invoice ON Customer.CustomerId = Invoice.CustomerId
+JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+JOIN Canciones ON InvoiceLine.TrackId = Canciones.TrackId
+JOIN Genero ON Canciones.GeneroId = Genero.GeneroId
+GROUP BY pais
+ORDER BY totalventas DESC"
+
+resultado <- dbGetQuery(con,consulta)
+print(resultado)
+
+
+library(ggplot2)
+#analizar los musicas por paises 
+ggplot(resultado) +
+ aes(x = totalventas, y = pais, fill = generos) +
+ geom_bar(stat = "summary", fun = "sum") +
+ scale_fill_brewer(palette = "YlGn", direction = 1) +
+ theme_minimal()
+
+#determinar los generos en tedencia por cantidades 
+consulta2 <-"SELECT Genero.Nombre AS Generos,
+       SUM(InvoiceLine.Quantity) AS VentasTotales
+FROM Genero
+JOIN Canciones ON Genero.GeneroId = Canciones.GeneroId
+JOIN InvoiceLine ON Canciones.TrackId = InvoiceLine.TrackId
+GROUP BY generos
+ORDER BY VentasTotales DESC" 
+
+ressultado2 <- dbGetQuery(con,consulta2)
+library(ggplot2)
+ggplotly( ggplot(ressultado2) +
+            aes(x = Generos, y = VentasTotales, colour = Generos) +
+            geom_point(size = 2L) +
+            scale_color_viridis_d(option = "viridis", direction = 1) +
+            labs(x = "Generos", y = "Ventas totales", 
+                 title = "Generos mas vendidos ") +
+            theme_minimal() +
+            theme(plot.title = element_text(size = 16L, 
+        face = "bold"), axis.text.y = element_text(face = "italic"), 
+        axis.text.x = element_text(face = "italic", 
+                                                    
