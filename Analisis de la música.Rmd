@@ -207,30 +207,441 @@ visualización de las ventas y mejorar la experiencia del cliente"
 ### **Formulación del Problema**
 ¿Cómo incide la música en los clientes según su género más escuchado?
 
+
 COLUMN {data-width=700}
 ---------------------------------
 ### **Preguntas Generales**
 -   ¿Cuál fue el año con más rentabilidad en la música?
--   ¿Cuál fue el género más escuchado en los años 2009-2013?
--   ¿Cuáles son los países que frecuentemente compran música?
--   ¿Cuáles son los géneros más escuchados en los países? 
--   ¿Cuáles son los álbumes y artistas más producidos?
--   ¿Cuáles son los álbumes y artistas más escuchados?
--   ¿Cuál es el género musical más escuchado?
--   ¿Cuál fue el compositor con más influencia?
 
+-   ¿Cuál fue el género más escuchado en los años 2009-2013?
+
+-   ¿Cuáles son los países que frecuentemente compran música?
+
+-   ¿Cuáles son los géneros más escuchados en los países? 
+
+-   ¿Cuáles son los álbumes y artistas más producidos?
+
+-   ¿Cuáles son los álbumes y artistas más escuchados?
+
+-   ¿Cuál es el género musical más escuchado?
+
+-   ¿Cuál fue el compositor con más influencia?
 
 
 Row {.tabset .tabset-fade}
 ----------------------------------------------------
+### **Justificación**
+  La música es un elemento que se crea y comparte en todas partes el mundo con
+  fines artísticos y/o comerciales; esta última es la razón por la cual la
+  empresa Chinook se ha comunicado con la consultora para poder mejorar la
+  consistencia de las ventas a futuro en los países donde no se ha podido abrir
+  paso en sus respectivos mercados, debido a que en los últimos años la empresa
+  minorista distribuidora de música se ha visto menguada en su apartado de
+  ventas, por ello se le realizará un extenso análisis estadístico por par de una
+  consultora financiera empleando los datos recolectados desde 2009 hasta 2013
+  para comprender cuáles han sido las tendencias demostradas por el público
+  objetivo de la empresa Chinook que debe considerar para adaptarse a un mercado
+  cambiante que se ve afectado por elementos como las modas que surgen con cada
+  temporada en cada región en la que opera comercialmente.
+
 ### **Objetivo General**
 *   Determinar la influencia y alcance de la música en los clientes
 
 ### **Obejtivos Específicos**
 -    *Analizar la diversidad de los géneros musicales*
+
 -    *Identificar lso artistas más populares por géneros*
+
 -    *Examinar las tendencias de compra de los clientes*
+
 -    *Estudiar la duración de las pistas musicales*
+
 -    *Determinar los géneros en tendencia de la época*
+
 -    *Analizar las tendencias musicales de los países*
+
+
+
+Marco Teorico
+=============================================================
+
+ROW {data-width=400}
+------------------------------------------------------------------------------
+### **Introducción**
+El análisis de las preferencias musicales del cliente según las ventas y la
+tendencia del género es un área de estudio que combina los campos de la música,
+las ventas (marketing) y la estadística. En este trabajo se busca entender cómo
+las preferencias musicales de los clientes pueden influir en sus decisiones de
+compra y cómo estas tendencias pueden cambiar con el tiempo.\
+\
+El análisis de datos implica la interpretación de los resultados
+estadísticos para extraer conclusiones significativas. En este análisis, se
+utilizan variables cualitativas y cuantitativas, para determinar las diferentes
+observaciones en las ventas de música entre diferentes géneros, lo cual son
+estadísticamente significativas.\
+\
+Los resultados de este análisis serán utilizados por los minoristas de
+música, los artistas y los productores para entender mejor a su audiencia y
+adaptar su música, y estrategias de marketing, para satisfacer las preferencias
+de sus clientes. Por ejemplo, si un género musical en particular ha ganado
+popularidad, los minoristas de música pueden optar por promocionar más música
+de ese género. 
+
+
+### **Términos Claves**
+-   *Música:* Consiste en conseguir efectos estéticos a través de la manipulación de sonidos vocales o instrumentales, conforme a estándares de géneros y estilos musicales.
+-   *Género:* Es un conjunto de elementos que comparten ciertos rasgos. Estos géneros pueden dividirse en grupos específicos conocidos como subgéneros.
+-   Artista: persona que se dedique a una actividad considerada como un arte.
+-   *Tendencias musicales:* Se ven impulsadas por las preferencias cambiantes de los oyentes, las innovaciones en la producción musical y la aparición de nuevos géneros de la música o en un artista muy popular.
+-   *Influencias:* Inclinación en las personas y en las cosas hacia determinados propósitos.
+-   *Movimientos sociales:* Son esfuerzos conjuntos de ciudadanos, grupos y comunidades vinculados por metas similares que se autoorganizan para actuar y superar dificultades y problemas sociales juntos.
+-   *Factura:* Es un documento comercial que registra la información relativa a la compra o venta de un bien o servicio.
+-   *Línea Factura (Recibo):* Es la sección en una factura que describe un producto o servicio, acorde con las regulaciones de facturación.
+-   *Cliente / Audiencia:* Es la persona que compra productos o servicios de una empresa. Al hacerlo, tiene como objetivo satisfacer una necesidad, resolver un problema o complacer un deseo.
+-   *Playlist:* Es una compilación personalizada de canciones y videos musicales.
+
+
+Row {.tabset .tabset-fade}
+----------------------------------------------------
+### **Definición de Variables**
+| Nombre de la variable | Descripción  |
+|-------------------|--------------|
+| Géneros Musicales | Categorías que nos permiten clasificar una composición de tipo musical. Entre estos se encuentran: rock, latin, alternative & Punk, etc.
+|                   |              |
+| Artistas | Aquellas figuras que influyeron a un grupo de personas por su música o acciones. |  
+|                  |               |
+| Tendencia de compras de los clientes | Los estándares musicales que tiene el cliente hacia un género musical en específico.|
+|                  |               |
+| Duración | Duración de las pistas en milisegundos.|
+|                   |              |
+| Tendencia del género de la época | La Puntuación o compras totales de la selección de la audiencia.|
+|                   |              |
+| Estandares Musicales | Las diferentes posturas o gustos musicales que tiene una población en conjunto
+|                 |                |
+
+
+### **Bases Teoricas**
+-   **Influencia de la música en la audiencia:**
+  Las influencias de la música en nuestra mente es única y poderosa, ya que generan 
+  diferentes tipos de emociones y sensaciones que le permite a la audiencia evaluar
+  y seleccionar sus gustos musicales.
+
+-   **Ventas y/o Tendencias del género musical:**
+  Una tendencia musical se define por aquel estilo o corriente musical popular 
+  que se adapta en un grupo de personas en un tiempo determinado, o simplemente
+  forman parte de ciertas culturas que están de moda en dicho tiempo. Las 
+  tendencias actuales tiene mucho valor para la industria, ya que es visualizar
+  los datos de las ventas de los sellos musicales, e incluso los datos de los
+  “escuchas” o “visualizaciones” de un género en específico.
+
+-   **Diversidad del género musical:**
+  La música ha experimentado una diversidad tanto en género como en estilos,
+  llegando a abarcar tal magnitud, que sería difícil de concretar todos los 
+  estilos y sub-estilos existentes hoy en día. La diversidad de géneros musicales
+  es muy amplia hoy en dia, tantas fuciones y estilos que logran llamar la
+  atención del público; es a lo que conocemos como "tendencias musicales".
+
+-   **Impacto de un artista musical en la cultura**
+  La música y los músicos han tenido un impacto significativo en la moda a lo 
+  largo de los años. Desde las icónicas chaquetas de cuero de los rockeros hasta
+  las extravagantes vestimentas de los artistas pop, los estilos musicales han
+  generado tendencias y han dejado una marca en la cultura popular.
+
+
+Análisis 1
+===========================================================================
+#### **¿Cuál fue el año con más rentabilidad en la música?**
+
+COLUMN {date-width=50}
+----------------------------------------------------
+```{r}
+
+Consulta <- "SELECT strftime('%Y-%m', InvoiceDate) AS Temporada, 
+              SUM(invoice.Total) AS Total
+            FROM Invoice
+            GROUP BY Temporada
+            ORDER BY Temporada ASC"
+mes_rentable <- dbGetQuery(musicadb, Consulta)
+mes_rentable
+
+```
+
+Row {data-width=400}
+----------------------------------------------------
+```{r}
+
+
+fig <- plot_ly(mes_rentable, type = 'scatter', mode = 'lines')%>%
+  add_trace(x = ~Temporada, y = ~Total)%>%
+  layout(showlegend = F, title='Años Rentables de la música',
+         xaxis = list(rangeslider = list(visible = T)))
+fig <- fig %>%
+  layout(
+    xaxis = list(zerolinecolor = '#ffff',
+                 zerolinewidth = 2,
+                 gridcolor = 'ffff'),
+    yaxis = list(zerolinecolor = '#ffff',
+                 zerolinewidth = 2,
+                 gridcolor = 'ffff'),
+    plot_bgcolor='#e5ecf6', width = 900)
+
+fig
+
+
+```
+> De acorde a la gráfica lineal, en el mes de enero del 2010 alcanzó el punto
+máximo de las ventas de 52.62 dólares, en febrero baja a 46.62 dólares y marzo 44.62 dólares, para después mantenerse en 37 dolares aproximadamente. Siendo 2010 el año con más rentabilidad en la música.
+
+Análisis 1.5
+===============================================================================
+
+COLUMN {date-width=100}
+----------------------------------------------------
+```{r}
+
+renta <- "SELECT strftime('%Y', InvoiceDate) AS 'Año', SUM(Invoice.Total) AS Total
+          FROM Invoice
+          GROUP BY Año"
+renta_epoca <- dbGetQuery(musicadb, renta)
+renta_epoca
+
+```
+
+
+Row {data-width=200}
+----------------------------------------------------
+```{r}
+
+Torta_plot <- plot_ly(
+  data = renta_epoca, 
+  labels = ~Año,
+  values = ~Total,
+  type = 'pie'
+) %>%
+  layout(
+    title = "Epoca rentable")
+
+Torta_plot
+
+```
+> Según la gráfica el año 2010 tiene el 20.7% de las ventas en total mientras que
+el 2012 el 20.5%, 2011 el 20.2% y, 2009 y 2013 alcanzan un 19.3% de las ventas
+de la época.
+
+
+Analisis 2
+=============================================================================
+#### **¿Cuál fue el género más escuchado en los años 2009-2013?**
+
+
+ROW {data-width=450}
+---------------------------------------
+```{r}
+
+review <- "SELECT strftime('%Y', Invoice.InvoiceDate) AS Epoca, 
+    Genero.Nombre AS Genero, SUM(InvoiceLine.Quantity) AS Total_Compras, 
+		SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity) AS Total_Ventas
+          FROM Invoice
+          JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+          JOIN Canciones ON InvoiceLine.CancionID = Canciones.CancionID
+          JOIN Genero ON Canciones.GeneroId = Genero.GeneroId
+          WHERE strftime('%Y', Invoice.InvoiceDate) BETWEEN '2009' AND '2013'
+          GROUP BY Epoca, Genero
+          ORDER BY Epoca, Total_Compras DESC"
+Review_Años <- dbGetQuery(musicadb, review)
+Review_Años
+
+```
+
+
+ROW {data-width=700}
+--------------------------------------------------
+```{r}
+Disperso_plot <- plot_ly(data = Review_Años, 
+                x= ~Total_Compras,
+                y= ~Total_Ventas,
+                type="scatter",
+                color=~Genero,
+                frame = ~Epoca)
+
+Disperso_plot
+```
+> Entre el total de ventas y el total de compras para los 25 géneros musicales visualizados.Desde el año 2009 hasta el 2013, se centra en el intervalo de [0; 20] en ambos ejes, proyectando una relación lineal directa.  A lo largo de los años se muestran valores atípicas alejados en los puntos de concentración, estos son los géneros más influenciados de cada año.
+
+
+Análisis 3
+=============================================================================
+#### **¿Cuáles son los países más frecuentes que compran música?**
+ROW {data-width=400}
+---------------------------------------------------------------------------
+```{r}
+consulta1 <- "SELECT Cliente.Pais as Pais, Genero.Nombre as Generos, 
+              count(InvoiceLine.InvoiceLineId) as TotalVentas
+              FROM Cliente
+              JOIN Invoice ON Cliente.ClienteId = Invoice.ClienteId
+              JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+              JOIN Canciones ON InvoiceLine.CancionID = Canciones.CancionID
+              JOIN Genero ON Canciones.GeneroId = Genero.GeneroId
+              GROUP BY Pais
+              ORDER BY TotalVentas DESC"
+resultado1 <- dbGetQuery(musicadb, consulta1)
+print(resultado1)
+
+```
+
+ROW {data-width=600}
+---------------------------------------------------------------------------
+```{r}
+
+paises_musica <- ggplot(resultado1) + aes(x = TotalVentas, y = Pais, fill = Generos) +
+  geom_bar(stat = "summary", fun = "sum") +
+  scale_fill_brewer(palette = "YlGn", direction = 1) +
+  theme_minimal()
+
+paises_musica
+
+```
+
+> Esta gráfica de barras expresa cual es el género que más se vendio por cada
+país, siendo los más destacados EE.UU con el género Alterative and Punk, en
+Canada el Rock y en Brazil el Latín.
+
+Análisis 4
+===============================================================================
+#### **Género en tendencia por cantidad**
+
+ROW {data-width=400}
+-------------------------------------------------------------------------
+```{r}
+
+consulta2 <- "SELECT Genero.Nombre AS Generos, SUM(InvoiceLine.Quantity) AS VentasTotales
+FROM Genero
+JOIN Canciones ON Genero.GeneroId = Canciones.GeneroId
+JOIN InvoiceLine ON Canciones.CancionID = InvoiceLine.CancionID
+GROUP BY Generos
+ORDER BY VentasTotales DESC"
+resultado2 <- dbGetQuery(musicadb, consulta2)
+print(resultado2)
+
+```
+
+ROW {data-width=600}
+-----------------------------------------------------------------------------
+```{r}
+GenerosTendecia <- ggplotly( ggplot(resultado2) +
+            aes(x = Generos, y = VentasTotales, colour = Generos) +
+            geom_point(size = 2L) +
+            scale_color_viridis_d(option = "viridis", direction = 1) +
+            labs(x = "Generos", y = "Ventas totales", 
+                 title = "Generos mas vendidos ") +
+            theme_minimal() +
+            theme(plot.title = element_text(size = 16L, 
+                                            face = "bold"),
+                  axis.text.y = element_text(face = "italic"), 
+                  axis.text.x = element_text(face = "italic", angle = 60L)) )
+GenerosTendecia
+
+```
+> En el gráfico de barras se observa los cinco generos que ocupan más del 90% de la demanda, siendo en orden de mayor a menor: Rock, Latín, Metal, Alternative and Punk y el Jazz.
+
+
+Analisis 5
+===========================================================================
+#### **¿Cuáles son los artistas mas producidos y escuchados?**
+
+ROW {data-width=500}
+----------------------------------------------------
+```{r}
+
+Albumesmasvendidos <- "SELECT strftime('%Y', InvoiceDate) AS Año, 
+                        Album.Titulo AS Album, Artista.Nombre AS Artista, 
+                        SUM(InvoiceLine.Quantity) AS TotalVentas
+                      FROM Invoice
+                      JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+                      JOIN Canciones ON InvoiceLine.CancionID = Canciones.CancionID
+                      JOIN Album ON Canciones.AlbumId = Album.AlbumId
+                      JOIN Artista ON Album.ArtistaId = Artista.ArtistaId
+                      GROUP BY Año, Album, Artista
+                      ORDER BY TotalVentas DESC
+                      LIMIT 10"
+Albumesmasvendidos <- dbGetQuery(musicadb,Albumesmasvendidos)
+print(Albumesmasvendidos)
+
+
+```
+
+ROW {data-width=300}
+-------------------------------------------------------------
+```{r}
+
+ggplotly( ggplot(Albumesmasvendidos) +
+            aes(x = Album, y = TotalVentas, colour = Artista) +
+            geom_point(size = 2L) +
+            scale_color_viridis_d(option = "viridis", direction = 1) +
+            labs(x = "Album", y = "TotalVentas", 
+                 title = "Albumes mas vendido por años ") +
+            theme_minimal() +
+            theme(plot.title = element_text(size = 16L, 
+                                            face = "bold"), axis.text.y = element_text(face = "italic"), 
+                  axis.text.x = element_text(face = "italic", angle = 60L)) )
+
+
+```
+> Los artistas más vendido y producido en los últimos años (2009 - 2013), Chico Buarque
+y The Office con 11 ventas, Genne Krupa con 10 ventas y el resto de los artistas con
+un total de 9 ventas.
+
+
+Conclusiones
+===============================================================================
+Row {.tabset .tabset-fade}
+----------------------------------------------------
+### Obejetivo 1
+#### **Analizar la Diversidad de Géneros Musicales:**
+**Conclusión:** 
+  Los géneros musicales varían tanto como las modas en las poblaciones de todo el mundo, entendiendo así que el factor demográfico siempre afectará a las tendencias, por ende, estar al tanto de las modas y modismos de ciertas regiones puede ser decisivo en el incremento de las ventas, además de esta forma es que surgen los géneros musicales que parten de gustos que se extienden por la sociedad, es decir una moda.
+  
+**Recomendación:** 
+  La forma ideal de proceder con el análisis de la diversidad en los géneros musicales sería distribuir estratégicamente los productos que  puedan tener un mayor impacto según la región a la que se envíe, por ejemplo el estudio  determinó que en Brasil se consume más música latina que en cualquier otro país por ende llevar géneros que se posea el concretos a ciertas regiones es lo ideal para maximizar las ventas.\
+
+### Objetivo 2
+#### **Identificar los Álbumes Más Populares de la época:**
+**Conclusión:**
+  La mayoría de los álbumes que son populares de las épocas son del género rock y quienes más los consumen son Estados Unidos, por el cambio de la sociedad en las épocas.
+
+**Recomendaciones:** 
+  Encontrar patrones de modas y frecuencia en cada años, y como puede influir en los gusto de los clientes.
+
+### Objetivo 3
+#### **Examinar las Tendencias de Compra de los Clientes:** 
+**Conclusión:** 
+  Las tendencias de compras ocurre por diferentes factores e influencia del cliente, como es la diversidad de géneros,cultura,duración de pista y el precio.
+  
+**Recomendaciones:** 
+  Realizar encuesta a una muestra de los clientes cada cierto periodo de tiempo para examinar los diferentes factores que puedan originarse en las nuevas modas o tendencias.
+
+### Objetivo 4
+#### **Estudiar la Duración de las Pistas Musicales:**
+**Conclusión:** 
+  La duración de las pistas musicales influye en la compra de los clientes, esto se debe a que mientras más duración tenga tiene menos solicitudes, igual pasa con las que tiene una duración corta.
+
+**Recomendaciones:** 
+  Establecer un rango de tiempo ideal de la duración músical por la frecuencia de compra de los clientes y sus opiniones.
+
+
+### Objetivo 5
+#### **Determinar los géneros en tendencia de la época:** 
+**conclusión:** 
+  Los géneros más solicitados fueron el rock,latin y el jazz esto se debe a su ritmos únicos y por las influencias, modas y movimientos sociales de dicha épocas.
+  
+**Recomendaciones:** 
+  Verificar los géneros que los cliente más comprá con regularidad para tener una anticipación de cómo el género musical relacionado al artista incrementa sus valores, tanto de compras como de ventas
+
+### Objetivo 6
+#### **Analizar las tendencias musicales de los países:**
+  Las tendencias musicales de los países se ven marcado por las diferentes culturas, etnias,expresiones sociales y moda que pueden ser distintas en varios países, como en estados unidos que el género más escuchado es el rock, esto se debe que los primeros indicios de este género fue en estados unidos y donde tuvo un mayor auge de alcance en el público más juvenil, esto hace que la mayoría de la audiencia de dicho país se sienta identificado.
+  
+**Recomendaciones:**
+  Comprender por medios de las redes sociales las modas y tendencias marcadas por la cultura, etnias, expresiones sociales y moda en los diferentes géneros y estilos musicales que eligen los clientes, para obtener una gama de diversidad de música que se ajuste a las diferentes influencias culturales y que sean rentables.
+
 
