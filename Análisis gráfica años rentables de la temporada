@@ -1,0 +1,21 @@
+---
+title: 'Análisis gráfica #2 Años rentables de las ventas '
+author: "sebasalf"
+date: "2024-06-24"
+output: HTML_document
+---
+
+\#**Análisis de gráfica de años rentables**
+
+En la gráfica lineal se expresa los resultados de los años rentables con el total de ventas por cada semestre respectivamente,
+nos permite entender cuales fueron los maximos y minimos en las ventas durante la muestra que abarca la base de datos.
+
+#\*\*Máximos\*\*
+
+Enero del 2010 encontramos un maximo absoluto para las ventas a su vez se pueden apreciar dos maximos relativos entre Enero-Julio del 2011, 
+por último se puede encontrar otros dos maximos relativos en Agosto-Septiembre del 2012 y en los ultimos registros posteriores a Juli del 2013 se observa un último máimo relativo.
+
+\#**Mínimos**
+
+En cuestion de mínimos podemos encontrar el primer mínimo relativo despues de Junio del 2010,
+previo al inicio del año 2012 se aprecia el mínimo absoluto de menos de 25 ventas, y por último podemos apreciar de forma consecutiva dos mínimos relativos entre los meses de Enero y Julio del 2013.
