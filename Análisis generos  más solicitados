@@ -1,0 +1,12 @@
+---
+title: 'Análisis gráfica #3 Generos más solicitados '
+author: "sebasalf"
+date: "2024-06-24"
+output: HTML_document
+---
+
+\#**Análisis de gráfica de Generos más solicitados**
+
+En el gráfico de torta podemos apreciar cuales son los cinco generos que ocupan más del 90% 
+de la demanda, siendo en orden de mayor a menor, Rock, Latín, Metal, 
+Alternative and Punk y el Jazz.
