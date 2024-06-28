@@ -1,0 +1,12 @@
+---
+title: 'Análisis gráfica #5 Genero más vendido por cada país'
+author: "sebasalf"
+date: "2024-06-24"
+output: HTML_document
+---
+
+\#**Análisis de los generos más vendidos por país**
+
+Esta grafica de barras expresa cual es el genero que más vendio por cada país, 
+siendo los más destacados EE.UU que el genro que más vedio es el Alterative and Punk,
+En Canada  en Rock y en Brazil el Latín.
